@@ -1,9 +1,9 @@
 # Theo.RnD.Aurelia
-My Learning and RnD on the Awesome Aurelia frame work. 
+My Learning and RnD on the Awesome Aurelia framework. 
 
-(Still work in progress, Haave lot of things in my mind that I want to try out... So staay tunedd to thiss repo. Look into read me file of each project for details on the implementation)
+#####(Still work in progress, Have lot of things in my mind that I want to try out... So stay tuned to this repo. Look into read me file of each project for details on the implementation)
 
-I have been using the Aurelia Framework (http://aurelia.io) for sometime noww and I have been a great fan of this fraamework , Below are some of the points from the creators of Aurelia and how it standss out from the rest of the SPA crowd liek Angular , react etc...
+I have been using the Aurelia Framework (http://aurelia.io) for sometime now and I have been a great fan of this framework , Below are some of the points from the creators of Aurelia and how it stands out from the rest of the SPA crowd liek Angular , react etc...
 
 ### Key Highlightss of Aurelia
 * Aurelia is a medium size framework, smaller than many others and with no external dependencies.
