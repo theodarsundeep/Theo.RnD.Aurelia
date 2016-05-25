@@ -9,7 +9,7 @@ using Microsoft.Extensions.PlatformAbstractions;
 
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
-
+using Theo.RnD.Aurelia.OAuthIdentityServer.Extensions;
 using Theo.RnD.Aurelia.OAuthIdentityServer.IdentityConfigs;
 using Theo.RnD.Aurelia.OAuthIdentityServer.UI;
 using Theo.RnD.Aurelia.OAuthIdentityServer.UI.Login;
@@ -51,15 +51,25 @@ namespace Theo.RnD.Aurelia.OAuthIdentityServer
             var builder = services.AddIdentityServer(options => {
                 options.SigningCertificate = cert;
                 options.Endpoints.EnableEndSessionEndpoint = true;
+                options.Endpoints.EnableIdentityTokenValidationEndpoint = true;
+                options.Endpoints.EnableUserInfoEndpoint = true;
                 options.AuthenticationOptions = new AuthenticationOptions
                 {
                     EnableSignOutPrompt = false
+                };
+                options.EventsOptions = new IdentityServer4.Core.Configuration.EventsOptions
+                {
+                    RaiseSuccessEvents = true,
+                    RaiseErrorEvents = true,
+                    RaiseFailureEvents = true,
+                    RaiseInformationEvents = true
                 };
             });
             builder.Services.AddLogging();
             builder.AddInMemoryClients(Clients.Get());
             builder.AddInMemoryScopes(Scopes.Get());
             builder.AddInMemoryUsers(Users.Get());
+            builder.AddCustomGrantValidator<CustomGrantValidator>();
 
 
             // Add framework services.

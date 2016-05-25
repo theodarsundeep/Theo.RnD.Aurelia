@@ -104,40 +104,40 @@ namespace Theo.RnD.Aurelia.UI
                 options.AutomaticAuthenticate = true;
             });
 
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            // *** This will enable the Authentication from the MVC aapplication *** START
+            //JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             //app.UseIdentityServerAuthentication(options =>
             //{
             //    options.Authority = "http://localhost:10011/";
-            //    options
             //    options.ScopeName = "aurelia.backend.datarecords";
             //    options.ScopeSecret = "aurelia.backend.datarecords";
             //    options.AutomaticAuthenticate = true;
             //    options.AutomaticChallenge = true;
             //});
 
-            app.UseOpenIdConnectAuthentication(options =>
-            {
-                options.AuthenticationScheme = "oidc";
-                options.SignInScheme = "cookies";
-                options.AutomaticChallenge = true;
+            //app.UseOpenIdConnectAuthentication(options =>
+            //{
+            //    options.AuthenticationScheme = "oidc";
+            //    options.SignInScheme = "cookies";
+            //    options.AutomaticChallenge = true;
 
-                options.Authority = "http://localhost:10011/";
-                options.RequireHttpsMetadata = false;
+            //    options.Authority = "http://localhost:10011/";
+            //    options.RequireHttpsMetadata = false;
 
-                options.ClientId = "aurelia.ui";
-                options.ClientSecret = "aurelia.ui";
-                //options.ResponseType = "id_token token";
+            //    options.ClientId = "aurelia.ui";
+            //    options.ClientSecret = "aurelia.ui";
+            //    //options.ResponseType = "id_token token";
 
 
-                //options.Scope.Add("profile");
-                //options.Scope.Add("email");
-                //options.Scope.Add("roles");
-                options.Scope.Add("aurelia.backend.datarecords");
+            //    //options.Scope.Add("profile");
+            //    //options.Scope.Add("email");
+            //    //options.Scope.Add("roles");
+            //    options.Scope.Add("aurelia.backend.datarecords");
 
-                //options.TokenValidationParameters.NameClaimType = "name";
-                //options.TokenValidationParameters.RoleClaimType = "role";
-            });
-
+            //    //options.TokenValidationParameters.NameClaimType = "name";
+            //    //options.TokenValidationParameters.RoleClaimType = "role";
+            //});
+            // *** This will enable the Authentication from the MVC aapplication *** END
 
             // To configure external authentication please see http://go.microsoft.com/fwlink/?LinkID=532715
 

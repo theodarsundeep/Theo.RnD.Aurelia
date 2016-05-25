@@ -7,7 +7,7 @@ using Microsoft.AspNet.Authorization;
 
 namespace Theo.RnD.Aurelia.UI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class HomeController : Controller
     {
         public IActionResult Index()

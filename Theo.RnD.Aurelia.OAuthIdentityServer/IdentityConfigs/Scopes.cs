@@ -10,11 +10,13 @@ namespace Theo.RnD.Aurelia.OAuthIdentityServer.IdentityConfigs
     {
         public static IEnumerable<Scope> Get()
         {
-            return new[]
+            var scopes = new List<Scope>
             {
                 StandardScopes.OpenId,
                 StandardScopes.ProfileAlwaysInclude,
                 StandardScopes.EmailAlwaysInclude,
+                StandardScopes.OfflineAccess,
+                StandardScopes.RolesAlwaysInclude,
                 new Scope
                 {
                     Name = "aurelia.backend.datarecords",
@@ -29,9 +31,10 @@ namespace Theo.RnD.Aurelia.OAuthIdentityServer.IdentityConfigs
                         new ScopeClaim(StandardScopes.Roles.Name),
                         new ScopeClaim("aurelia.backend.datarecords")
                     }
-
                 }
-            };
+        };
+            scopes.AddRange(StandardScopes.All);
+            return scopes;
         }
 
     }

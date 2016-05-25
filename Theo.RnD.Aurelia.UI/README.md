@@ -26,7 +26,29 @@ lets see if Theo suceeds in the next steps.
 
 * This Application will be one of the client application that uses that  AuthServer as the Authority.
 
-* Now that you understaanndd how we setup the Auth Server using the IdentityServer4 , Let configure this Aurelia.UI as a client that used the Auth Services
+* Now that you understaanndd how we setup the Auth Server using the IdentityServer4 , Let configure this Aurelia.UI as a client that used the Auth Services.
 
-* Enable the CORS by adding the package "Microsoft.AspNet.Cors" in package.jason 
+* There are bassicaally two wayss I wanted to try out the Authentication on this client...
+
+	* First --> Enaable the Auth from just the ASP.NET Core MVC, which is fairly simple as mentioned below in the below points.
+		
+		* Enable the CORS by adding the package "Microsoft.AspNet.Cors" in package.jason 
+
+		* Added the follwing dependencies "Microsoft.AspNet.Authorization", "Microsoft.AspNet.Authentication.jwtBearer", "IdentityServer4.AccessTokenValidation", "Microsoft.AspNet.Authentication.OpenIdConnect".
+		
+		* added the code to configue teh Identity servver in the Statup.cs (Comented now).
+		
+		* For evaluationg this funcctionality have added a client on the identity server as aurelia.ui which implements the Hybrid flow. (look inot the IdentityServer ddoccs for the details on the flow.)
+		
+		* Then Just add the "Authorize" attribute in the home controller and run the application.
+
+		* These chaange done should get the application redirect to our identity server for the authentication aand show the login page if the user is not authenticaated. #####BOOM BOOM!! EASY PEASY!!! got the client working !! Next thing that I wanted to evaaluate is more interesting staay tuned.
+
+	* Second --> This was the interesting one that I wanted to try, Enaable and implement the Auth using the Aurealia client libary. Luckly had a open souce aaurelia Auth plugin available  (https://github.com/paulvanbladel/aurelia-auth) wwith the samples thanks to the creator  made my life a bit easy.  Below listed are some cchange done to the project.
+		
+		* Installed the aurelia-auth into the JSPM packages.
+		
+		* For evaluationg this funcctionality have added a client on the identity server as aurelia.ui.js which implements the Code flow. (look inot the IdentityServer ddoccs for the details on the flow.)
+
+* 
 

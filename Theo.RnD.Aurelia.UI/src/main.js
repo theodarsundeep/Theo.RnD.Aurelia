@@ -1,10 +1,13 @@
 import 'bootstrap';
+import authConfig from 'auth-config'
 
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .developmentLogging();
-
+    .developmentLogging()
+    .plugin('aurelia-auth', (baseConfig)=> { baseConfig.configure(authConfig)});
+  console.log("Test -- > ");
+  console.log(authConfig);
   //Uncomment the line below to enable animation.
   //aurelia.use.plugin('aurelia-animator-css');
   //if the css animator is enabled, add swap-order="after" to all router-view elements
