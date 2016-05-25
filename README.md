@@ -5,6 +5,8 @@ My Learning and RnD on the Awesome Aurelia framework.
 
 I have been using the Aurelia Framework (http://aurelia.io) for sometime now and I have been a great fan of this framework , Below are some of the points from the creators of Aurelia and how it stands out from the rest of the SPA crowd liek Angular , react etc...
 
+Aurelia is a powerful Javascript framework based on standards. One of the strongest aspects of learning Aurelia is you are not learning a framework, you are learning how to use future-spec Javascript.
+
 ### Key Highlightss of Aurelia
 * Aurelia is a medium size framework, smaller than many others and with no external dependencies.
 * Aurelia is as fast or faster than all other frameworks.
