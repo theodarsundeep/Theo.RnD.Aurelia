@@ -3,9 +3,11 @@ My Learning and RnD on the Awesome Aurelia framework.
 
 #####(Still work in progress, Have lot of things in my mind that I want to try out... So stay tuned to this repo. Look into read me file of each project for details on the implementation)
 
-I have been using the Aurelia Framework (http://aurelia.io) for sometime now and I have been a great fan of this framework , Below are some of the points from the creators of Aurelia and how it stands out from the rest of the SPA crowd liek Angular , react etc...
+I have been using the [Aurelia Framework](http://aurelia.io) for sometime now and I have been a great fan of this framework , Below are some of the points from the creators of Aurelia and how it stands out from the rest of the SPA crowd liek Angular , react etc...
 
 Aurelia is a powerful Javascript framework based on standards. One of the strongest aspects of learning Aurelia is you are not learning a framework, you are learning how to use future-spec Javascript.
+
+Watch This Webinar --> [Discover Aurelia with CEO Rob Eisenberg](https://www.youtube.com/watch?v=fi33aDFKvxE)
 
 ### Key Highlightss of Aurelia
 * Aurelia is a medium size framework, smaller than many others and with no external dependencies.
@@ -22,8 +24,8 @@ Aurelia is a powerful Javascript framework based on standards. One of the strong
 
 The List could go on and on. Here's a couple of links on the official Aurelia Docs.
 
-Tech Benefits: http://aurelia.io/docs.html#/aurelia/framework/1.0.0-beta.1.1.1/doc/article/technical-benefits
-Business Advantages: http://aurelia.io/docs.html#/aurelia/framework/1.0.0-beta.1.1.1/doc/article/business-advantages
+[Tech Benefits](http://aurelia.io/docs.html#/aurelia/framework/1.0.0-beta.1.1.1/doc/article/technical-benefits)
+[Business Advantages](http://aurelia.io/docs.html#/aurelia/framework/1.0.0-beta.1.1.1/doc/article/business-advantages)
 
 ### Aurelia Vs Angular 2
 * Aurelia is a much smaller library. Angular 2 is 750k minified and that does not include a router, animation or http client. That's not something anyone should ever think of going to production with ever. Aurela is 350k minified and that does include a router, animation and an http client. If you are targeting modern browsers and don't need all the polyfills we provide, you can even reduce that size by up to another 100k.
